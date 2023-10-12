@@ -13,6 +13,8 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.apkfuns.logutils.LogUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -84,13 +86,15 @@ public class DrawView extends View {
                 //新增一个轨迹
                 addNewPath(event);
                 //重绘
-                invalidate();
+                //invalidate();
+                LogUtils.w("看看调用次数：ACTION_DOWN");
                 return true;
             }
             case MotionEvent.ACTION_POINTER_DOWN:
                 //屏幕上已经有了手指，此时又有别的手指点击时事件
                 addNewPath(event);//重绘
-                invalidate();
+               // invalidate();
+                LogUtils.w("看看调用：ACTION_POINTER_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE: {
                 if (mDrawMoveHistory.size() > 0) {
