@@ -16,8 +16,8 @@ public class DrawFrameBuffer {
     }
 
     static {
-        //libJNIdrawFbLib
-        System.loadLibrary("JNIdrawFbLib");
+        //V3112板子
+        System.loadLibrary("JNIdrawFbLib_4k");
     }
 
     private static boolean isClose = true;

@@ -21,8 +21,8 @@ android {
 
     sourceSets{
         main {
-            jniLibs.srcDirs = ['lib']
-            jniLibs.srcDirs = ['lib2k']
+//            jniLibs.srcDirs = ['lib']
+//            jniLibs.srcDirs = ['lib2k']
         }
     }
     signingConfigs {
